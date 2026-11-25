@@ -1,0 +1,1643 @@
+
+:root {
+    --ouro: #c58a24;
+    --ouro-claro: #f4c65e;
+    --ouro-escuro: #684016;
+    --marrom: #21150f;
+    --marrom-claro: #39251a;
+    --azul: #218bdc;
+    --azul-neon: #64c9ff;
+    --vermelho: #bc3030;
+    --vermelho-neon: #ff6666;
+    --texto: #f5e7c5;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:
+        radial-gradient(ellipse at top, #68451f 0%, transparent 48%),
+        linear-gradient(180deg, #21150f, #120d09 75%);
+    color: var(--texto);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+/* CABEÇALHO */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 35px 20px 60px;
+    text-align: center;
+    background:
+        radial-gradient(ellipse at 50% 0%, #f0b43d66, transparent 55%),
+        linear-gradient(135deg, #87541e, #c58a24 48%, #724519);
+    border-bottom: 5px solid var(--ouro-claro);
+    box-shadow: 0 0 35px #d89c3240;
+}
+
+.runa {
+    color: #fff0b7;
+    font-family: "Cinzel", serif;
+    letter-spacing: 7px;
+    text-shadow: 0 0 12px #ffc94f70;
+}
+
+.sobretitulo {
+    font-family: "Cinzel", serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.hero > .sobretitulo {
+    margin-top: 18px;
+}
+
+/* CAPA PRINCIPAL */
+
+.capa {
+    width: min(1100px, 100%);
+    margin: 30px auto;
+    overflow: hidden;
+    background: var(--marrom);
+    border: 3px solid var(--ouro-claro);
+    outline: 1px solid #5d3712;
+    outline-offset: 6px;
+    box-shadow: 0 0 20px #ffce5b70, 0 15px 40px #180c06a0;
+}
+
+/* IMAGEM DA CAPA */
+.capa-principal {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    border-radius: 0;
+}
+
+/* CAPA NO CELULAR */
+@media (max-width: 600px) {
+    .capa {
+        width: calc(100% - 24px);
+        margin: 20px auto;
+    }
+
+    .capa-principal {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 1;
+        object-fit: contain;
+    }
+}
+
+.capa img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 6;
+    object-fit: cover;
+}
+
+.capa figcaption {
+    padding: 7px 12px;
+    background: #1d120de8;
+    color: var(--ouro-claro);
+    font: 11px "Cinzel", serif;
+    letter-spacing: 3px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Cinzel", Georgia, serif;
+}
+
+h1 {
+    margin: 35px auto 15px;
+    color: #2b1808;
+    font-size: clamp(30px, 6vw, 65px);
+    font-weight: 900;
+    line-height: 1.25;
+    text-transform: uppercase;
+    text-shadow: 0 1px #ffdc83, 0 0 20px #ffdc8355;
+}
+
+.divisor {
+    margin: 20px auto 30px;
+    color: #4a2b0e;
+    letter-spacing: 3px;
+}
+
+/* SINOPSE */
+
+.sinopse {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px clamp(18px, 5vw, 55px);
+    background: #f4c65e18;
+    border: 1px solid #f4c65e70;
+    box-shadow: inset 0 0 30px #5b310d30;
+    text-align: center;
+}
+
+.sinopse p {
+    margin-bottom: 20px;
+    color: #100b07;
+    font-size: clamp(17px, 2.1vw, 21px);
+    font-weight: 600;
+    text-shadow:
+        -1px -1px 0 #fff0c7,
+        1px -1px 0 #fff0c7,
+        -1px 1px 0 #fff0c7,
+        1px 1px 0 #fff0c7,
+        0 0 8px #fff5d9;
+}
+
+.sinopse .pergunta {
+    color: #120d08;
+    font-size: clamp(21px, 3vw, 28px);
+    font-weight: 700;
+    text-shadow:
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white,
+        0 0 12px white;
+}
+
+.sinopse .destaque,
+.sinopse .grito {
+    color: #3b2007;
+    font-family: "Cinzel", serif;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-shadow: 0 0 12px #ffe59a;
+}
+
+.sinopse .destaque {
+    font-size: 35px;
+}
+
+.sinopse .grito {
+    margin-top: 35px;
+    margin-bottom: 0;
+    font-size: clamp(23px, 4vw, 36px);
+}
+
+.hero > .runa:last-child {
+    margin-top: 35px;
+}
+
+/* TORNEIO */
+
+.torneio {
+    max-width: 1250px;
+    margin: auto;
+    padding: 70px 22px 90px;
+}
+
+.introducao {
+    margin-bottom: 55px;
+    text-align: center;
+}
+
+.introducao .sobretitulo {
+    color: var(--ouro-claro);
+}
+
+.introducao h2 {
+    margin: 12px 0;
+    color: var(--ouro-claro);
+    font-size: clamp(28px, 5vw, 48px);
+    text-shadow: 0 0 20px #d18c2e55;
+}
+
+.introducao > p:last-child {
+    color: #c9b28d;
+    font-style: italic;
+}
+
+/* CADA RODADA */
+
+.rodada {
+    position: relative;
+    margin-bottom: 60px;
+    padding: 25px 20px 30px;
+    background:
+        radial-gradient(ellipse at center, #59381d55, transparent 75%),
+        linear-gradient(135deg, #302016, #1a110d);
+    border: 1px solid #a97530;
+    box-shadow: 0 0 20px #0008, inset 0 0 25px #b67c2520;
+}
+
+.rodada::before,
+.rodada::after {
+    position: absolute;
+    color: var(--ouro-claro);
+    font-size: 25px;
+}
+
+.rodada::before {
+    content: "✦";
+    top: 5px;
+    left: 10px;
+}
+
+.rodada::after {
+    content: "✦";
+    right: 10px;
+    bottom: 5px;
+}
+
+/* NOMES DOS COMBATENTES */
+
+.nomes {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 30px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.nome-humano,
+.nome-deus {
+    font-size: clamp(13px, 2.2vw, 21px);
+    font-weight: 700;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.nome-humano {
+    color: var(--azul-neon);
+    text-shadow: 0 0 12px #168dff77;
+}
+
+.nome-deus {
+    color: var(--vermelho-neon);
+    text-shadow: 0 0 12px #ff333377;
+}
+
+/* QUATRO PARTES: IMAGEM, TEXTO, TEXTO, IMAGEM */
+
+.combate {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 15px;
+}
+
+
+.imagem {
+    display: block;
+    width: 100%;
+    height: 380px;
+    object-fit: contain;
+    object-position: center;
+    background: #20150e;
+}
+
+
+
+.imagem.humano {
+    border: 2px solid var(--azul);
+    box-shadow: 0 0 13px #218bdc50;
+}
+
+.imagem.deus {
+    border: 2px solid var(--vermelho);
+    box-shadow: 0 0 13px #dc292950;
+}
+
+/* DESCRIÇÕES */
+
+.texto {
+    min-width: 0;
+    padding: 18px 12px;
+    background: #110d0be0;
+    color: #e9d8b9;
+    font-size: 17px;
+    line-height: 1.65;
+    overflow-wrap: anywhere;
+    white-space: normal;
+}
+
+.texto p {
+    white-space: pre-line;
+}
+
+.texto-humano {
+    border-top: 2px solid var(--azul);
+}
+
+.texto-deus {
+    border-top: 2px solid var(--vermelho);
+}
+
+.texto span {
+    display: block;
+    margin-bottom: 12px;
+    font-family: "Cinzel", serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.texto-humano span {
+    color: var(--azul-neon);
+}
+
+.texto-deus span {
+    color: var(--vermelho-neon);
+}
+
+/* NÚMERO DA RODADA */
+
+.numero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 25px;
+    color: var(--ouro-claro);
+    font-family: "Cinzel", serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.numero::before,
+.numero::after {
+    content: "";
+    width: 65px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--ouro));
+}
+
+/* RODAPÉ DOURADO */
+
+footer {
+    padding: 45px 20px 30px;
+    background:
+        radial-gradient(ellipse at top, #edb54270, transparent 70%),
+        linear-gradient(135deg, #87541e, #c58a24 48%, #724519);
+    border-top: 5px solid var(--ouro-claro);
+    box-shadow: 0 -10px 35px #d89c3220;
+    color: #2a1909;
+    text-align: center;
+}
+
+footer h2 {
+    margin: 22px 0 10px;
+    font-size: clamp(20px, 4vw, 32px);
+}
+
+footer .runa {
+    color: #4a2b0e;
+}
+
+footer a {
+    color: #241507;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+footer a:hover {
+    color: #fff0bb;
+}
+
+.simbolo-final {
+    margin-top: 18px;
+    font-size: 27px;
+}
+
+/* ADAPTAÇÃO PARA CELULARES */
+
+@media (max-width: 760px) {
+    body {
+        font-size: 17px;
+    }
+
+    .hero {
+        padding: 25px 12px 40px;
+    }
+
+    .capa img {
+        aspect-ratio: 16 / 9;
+    }
+
+    .sinopse {
+        padding: 24px 16px;
+    }
+
+    .torneio {
+        padding: 50px 10px 60px;
+    }
+
+    .rodada {
+        margin-bottom: 40px;
+        padding: 22px 10px 25px;
+    }
+
+    .nomes {
+        gap: 12px;
+    }
+
+    .combate {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .texto {
+        padding: 13px 9px;
+        font-size: 16px;
+    }
+
+    .numero {
+        margin-top: 24px;
+    }
+}
+
+@media (max-width: 380px) {
+    .rodada {
+        padding-right: 7px;
+        padding-left: 7px;
+    }
+
+    .combate {
+        gap: 8px;
+    }
+
+    .texto {
+        padding: 10px 7px;
+        font-size: 15px;
+    }
+
+    .texto span {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .nomes {
+        gap: 8px;
+    }
+}
+
+.link-wattpad {
+    margin: 45px auto;
+    padding: 30px 20px;
+    max-width: 800px;
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #684016,
+        #c58a24,
+        #684016
+    );
+
+    border: 2px solid #f4c65e;
+    box-shadow: 0 0 20px #c58a2460;
+}
+
+.link-wattpad h2 {
+    color: #21150f;
+    font-size: clamp(22px, 4vw, 32px);
+    margin-bottom: 10px;
+}
+
+.link-wattpad p {
+    color: #21150f;
+    margin-bottom: 22px;
+}
+
+.botao-wattpad {
+    display: inline-block;
+    padding: 12px 28px;
+
+    color: #f4c65e;
+    background: #21150f;
+
+    border: 2px solid #f4c65e;
+    text-decoration: none;
+
+    font-family: "Cinzel", serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.botao-wattpad:hover {
+    color: #21150f;
+    background: #f4c65e;
+    box-shadow: 0 0 18px #ffe08a;
+    transform: scale(1.05);
+}
+
+
+/* Ajustes para celulares */
+
+@media (max-width: 600px) {
+
+    .imagem {
+        width: 100%;
+        height: auto;
+        max-height: 320px;
+        aspect-ratio: 3 / 4;
+        object-fit: contain;
+    }
+
+    .combate {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .lutador {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        width: 100%;
+    }
+
+    .lutador h3 {
+        order: 0;
+        font-size: 18px;
+        overflow-wrap: anywhere;
+        margin: 12px 0;
+        text-align: center;
+    }
+
+    .lutador .imagem {
+        order: 1;
+    }
+
+    .descricao {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .capa-principal {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}
+
+/* =========================================
+   MENU DE NAVEGAÇÃO FIXO
+========================================= */
+
+.menu-principal {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 14px;
+
+    background: #160e0bf2;
+    border-bottom: 2px solid var(--ouro);
+    box-shadow: 0 5px 18px #0009;
+
+    backdrop-filter: blur(10px);
+}
+
+.menu-principal a {
+    display: inline-block;
+    padding: 7px 18px;
+
+    color: var(--ouro-claro);
+    border: 1px solid transparent;
+    text-decoration: none;
+    text-align: center;
+
+    font-family: "Cinzel", serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    transition: 0.2s;
+}
+
+.menu-principal a:hover,
+.menu-principal a.ativo {
+    color: #21150f;
+    background: var(--ouro-claro);
+    border-color: #ffe5a0;
+}
+
+
+/* =========================================
+   ESTRUTURA DAS PÁGINAS INTERNAS
+========================================= */
+
+.pagina-interna {
+    min-height: 55vh;
+    padding: 55px 22px 85px;
+}
+
+.cabecalho-pagina {
+    max-width: 1000px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.cabecalho-pagina .runa {
+    color: var(--ouro-claro);
+}
+
+.cabecalho-pagina h1 {
+    color: var(--ouro-claro);
+    font-size: clamp(30px, 5vw, 52px);
+    text-shadow: 0 0 18px #d18c2e55;
+}
+
+.cabecalho-pagina p {
+    color: #d7c19c;
+    font-style: italic;
+}
+
+
+/* =========================================
+   CARTÕES DE PERSONAGENS E INDICAÇÕES
+========================================= */
+
+.grade-cartoes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+
+    max-width: 1200px;
+    margin: auto;
+}
+
+.cartao {
+    min-width: 0;
+    padding: 16px;
+
+    background: linear-gradient(145deg, #302016, #170f0b);
+    border: 1px solid #a97530;
+
+    box-shadow:
+        0 0 18px #0008,
+        inset 0 0 18px #b67c2520;
+
+    text-align: center;
+}
+
+.cartao h2,
+.cartao h3 {
+    margin: 12px 0 5px;
+    color: var(--ouro-claro);
+    font-size: clamp(16px, 2vw, 21px);
+    overflow-wrap: anywhere;
+}
+
+.cartao p {
+    color: #e9d8b9;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/* ESPAÇOS RESERVADOS PARA IMAGENS */
+
+.moldura-imagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 250px;
+    aspect-ratio: 3 / 4;
+
+    padding: 15px;
+
+    background: #20150e;
+    border: 1px dashed var(--ouro);
+
+    color: #c9a96c;
+
+    font: 12px "Cinzel", serif;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.moldura-imagem.capa-indicacao {
+    aspect-ratio: 3 / 4;
+    min-height: 220px;
+}
+
+
+/* INFORMAÇÃO DA DUPLA DA VALQUÍRIA */
+
+.dupla {
+    margin-top: 12px;
+    padding-top: 10px;
+
+    border-top: 1px solid #8c642e;
+
+    color: var(--ouro-claro) !important;
+}
+
+
+/* =========================================
+   PÁGINA DOS LUTADORES
+========================================= */
+
+.grupo-lutadores {
+    max-width: 1200px;
+    margin: 0 auto 55px;
+}
+
+.titulo-grupo {
+    margin: 0 0 20px;
+
+    color: var(--ouro-claro);
+    font-size: clamp(20px, 3vw, 28px);
+    text-align: center;
+}
+
+.grade-lutadores {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+
+/* AVISO DE EDIÇÃO */
+
+.aviso-edicao {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    color: #d6b66a;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(214, 182, 106, 0.4);
+    padding: 15px;
+    margin: 25px auto;
+    max-width: 850px;
+    border-radius: 5px;
+}
+
+
+/* =========================================
+   PÁGINA DE INDICAÇÕES
+========================================= */
+
+.cartao-indicacao {
+    display: flex;
+    flex-direction: column;
+}
+
+.cartao-indicacao .botao-wattpad {
+    margin-top: 15px;
+    align-self: center;
+}
+
+
+/* =========================================
+   ADAPTAÇÃO DO MENU PARA CELULARES
+========================================= */
+
+@media (max-width: 600px) {
+
+    .menu-principal {
+        justify-content: flex-start;
+        gap: 2px;
+
+        padding: 7px 5px;
+
+        overflow-x: auto;
+    }
+
+    .menu-principal a {
+        flex: 1 0 auto;
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================
+   ADAPTAÇÃO DAS PÁGINAS INTERNAS
+========================================= */
+
+@media (max-width: 600px) {
+
+    .pagina-interna {
+        padding: 38px 13px 60px;
+    }
+
+    .grade-cartoes,
+    .grade-lutadores {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 13px;
+    }
+
+    .cartao {
+        padding: 10px;
+    }
+
+    .moldura-imagem {
+        min-height: 170px;
+    }
+
+    .cartao p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .grade-cartoes,
+    .grade-lutadores {
+        grid-template-columns: 1fr;
+    }
+}
+
+.aviso-valquirias {
+    text-align: center;
+    color: #f4c65e;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    max-width: 800px;
+    margin: 25px auto;
+    padding: 15px;
+    border: 1px solid #684016;
+    border-radius: 5px;
+    background: rgba(57, 37, 26, 0.6);
+}
+
+
+/* ==================================
+   FLASHCARDS DOS LUTADORES
+================================== */
+
+.combate {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    perspective: 1200px;
+}
+
+.flashcard {
+    height: 420px;
+    min-width: 0;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.flashcard-interno {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+}
+
+/* Efeito ao passar o mouse */
+.flashcard:hover .flashcard-interno {
+    transform: rotateY(180deg);
+}
+
+/* Frente e verso */
+.flashcard-frente,
+.flashcard-verso {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+    background: #20150e;
+}
+
+/* Frente */
+.flashcard-frente {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    text-align: center;
+}
+
+.flashcard-frente img {
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+    background: #110d0b;
+}
+
+.flashcard-frente span {
+    margin-top: 12px;
+    font-family: "Cinzel", serif;
+    font-weight: 700;
+}
+
+.flashcard-frente small {
+    margin-top: 8px;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+/* Verso */
+.flashcard-verso {
+    transform: rotateY(180deg);
+    padding: 22px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flashcard-verso h3 {
+    font-family: "Cinzel", serif;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.flashcard-verso span {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.flashcard-verso p {
+    color: #e9d8b9;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Identidade visual */
+.flashcard.humano .flashcard-frente,
+.flashcard.humano .flashcard-verso {
+    border: 2px solid var(--azul);
+    box-shadow: 0 0 13px #218bdc50;
+}
+
+.flashcard.deus .flashcard-frente,
+.flashcard.deus .flashcard-verso {
+    border: 2px solid var(--vermelho);
+    box-shadow: 0 0 13px #dc292950;
+}
+
+.flashcard.humano span,
+.flashcard.humano h3 {
+    color: var(--azul-neon);
+}
+
+.flashcard.deus span,
+.flashcard.deus h3 {
+    color: var(--vermelho-neon);
+}
+
+/* Celulares */
+@media (max-width: 700px) {
+    .combate {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .flashcard {
+        height: 400px;
+    }
+
+    .flashcard-frente img {
+        height: 300px;
+    }
+}
+
+
+/* =====================================
+   TELA DE ENTRADA DO RAGNAROK
+===================================== */
+
+#intro-ragnarok {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(ellipse at center, #59381d 0%, #21150f 55%, #0b0806 100%);
+
+    text-align: center;
+    overflow: hidden;
+}
+
+/* CONTEÚDO */
+
+.intro-conteudo {
+    max-width: 850px;
+    width: 100%;
+    animation: surgir-intro 2s ease forwards;
+}
+
+/* SUBTÍTULO */
+
+.intro-subtitulo {
+    display: block;
+    color: var(--ouro-claro);
+    font-family: "Cinzel", serif;
+    font-size: 13px;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+}
+
+/* TÍTULO PRINCIPAL */
+
+.intro-conteudo h1 {
+    color: var(--ouro-claro);
+    font-family: "Cinzel", serif;
+    font-size: clamp(35px, 7vw, 75px);
+    text-shadow: 0 0 15px #f4c65e88,
+                 0 0 35px #c58a2488;
+    margin: 0;
+}
+
+/* DIVISOR */
+
+.intro-divisor {
+    width: 180px;
+    height: 2px;
+    margin: 30px auto;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--ouro-claro),
+        transparent
+    );
+    box-shadow: 0 0 12px var(--ouro);
+}
+
+/* DESCRIÇÃO */
+
+.intro-conteudo p {
+    color: #e9d8b9;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 21px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* BOTÃO */
+
+#botao-entrar {
+    padding: 16px 35px;
+
+    background: transparent;
+    border: 1px solid var(--ouro-claro);
+
+    color: var(--ouro-claro);
+    font-family: "Cinzel", serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#botao-entrar:hover {
+    background: var(--ouro-claro);
+    color: #21150f;
+    box-shadow: 0 0 20px #f4c65e88;
+    transform: scale(1.05);
+}
+
+/* ANIMAÇÃO DE SURGIMENTO */
+
+@keyframes surgir-intro {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+    .intro-subtitulo {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .intro-conteudo p {
+        font-size: 18px;
+    }
+
+    #botao-entrar {
+        padding: 14px 22px;
+        font-size: 12px;
+    }
+}
+
+
+/* TRANSIÇÃO DE SAÍDA DA INTRODUÇÃO */
+
+#intro-ragnarok {
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+#intro-ragnarok.intro-saindo {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+/* =================================
+   PÁGINA SOBRE O AUTOR
+================================= */
+
+.apresentacao-autor {
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(
+        135deg,
+        #21150f,
+        #39251a,
+        #21150f
+    );
+    border-bottom: 2px solid var(--ouro-escuro);
+}
+
+.texto-apresentacao {
+    max-width: 800px;
+}
+
+.subtitulo-autor {
+    color: var(--ouro-claro);
+    font-family: 'Cinzel', serif;
+    letter-spacing: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.texto-apresentacao h2 {
+    color: var(--ouro-claro);
+    font-family: 'Cinzel', serif;
+    font-size: clamp(42px, 7vw, 72px);
+    margin: 15px 0 5px;
+}
+
+.texto-apresentacao h3 {
+    color: #e5d2b5;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 27px;
+    margin: 0 0 20px;
+}
+
+.texto-apresentacao > p:last-child {
+    color: #e5d2b5;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* =================================
+   TRAJETÓRIA DO AUTOR
+================================= */
+
+.trajetoria-autor {
+    padding: 80px 20px;
+    background: var(--marrom);
+}
+
+.conteudo-trajetoria {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.conteudo-trajetoria h2 {
+    color: var(--ouro-claro);
+    font-family: 'Cinzel', serif;
+    font-size: clamp(26px, 4vw, 36px);
+    margin-bottom: 30px;
+}
+
+.conteudo-trajetoria p:not(.subtitulo-autor) {
+    color: #e5d2b5;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* =================================
+   TECNOLOGIA E APRENDIZADO
+================================= */
+
+.tecnologia-autor {
+    padding: 80px 20px;
+    background: var(--marrom-claro);
+    border-top: 1px solid var(--ouro-escuro);
+    border-bottom: 1px solid var(--ouro-escuro);
+}
+
+.conteudo-tecnologia {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.conteudo-tecnologia h2 {
+    color: var(--ouro-claro);
+    font-family: 'Cinzel', serif;
+    font-size: clamp(26px, 4vw, 36px);
+    margin-bottom: 30px;
+}
+
+.conteudo-tecnologia p:not(.subtitulo-autor) {
+    color: #e5d2b5;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Tecnologias */
+
+.tecnologias-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.tecnologias-lista span {
+    color: var(--ouro-claro);
+    background: var(--marrom);
+    border: 1px solid var(--ouro-escuro);
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.tecnologias-lista span:hover {
+    background: var(--ouro-escuro);
+    transform: translateY(-4px);
+}
+
+/* =================================
+   PROJETOS DO AUTOR
+================================= */
+
+.projetos-autor {
+    padding: 80px 30px;
+    background: var(--marrom);
+    text-align: center;
+}
+
+.projetos-autor > h2 {
+    color: var(--ouro-claro);
+    font-family: 'Cinzel', serif;
+    font-size: clamp(26px, 4vw, 36px);
+    margin: 15px 0 45px;
+}
+
+.grade-projetos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cartao-projeto {
+    background: var(--marrom-claro);
+    border: 1px solid var(--ouro-escuro);
+    border-radius: 10px;
+    padding: 30px 25px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.cartao-projeto:hover {
+    transform: translateY(-8px);
+    border-color: var(--ouro-claro);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.cartao-projeto h3 {
+    color: var(--ouro-claro);
+    font-family: 'Cinzel', serif;
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+.cartao-projeto p {
+    color: #e5d2b5;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.cartao-projeto span {
+    display: block;
+    color: var(--ouro-claro);
+    font-size: 13px;
+    letter-spacing: 1px;
+    border-top: 1px solid var(--ouro-escuro);
+    padding-top: 15px;
+}
+
+/* =================================
+   OBJETIVOS DO AUTOR
+================================= */
+
+.objetivos-autor {
+    padding: 90px 25px;
+    background: linear-gradient(
+        135deg,
+        var(--marrom-claro),
+        var(--marrom)
+    );
+    text-align: center;
+    border-top: 1px solid var(--ouro-escuro);
+}
+
+.objetivos-autor > h2 {
+    color: var(--ouro-claro);
+    font-family: 'Cinzel', serif;
+    font-size: clamp(26px, 4vw, 36px);
+    margin: 15px 0 35px;
+}
+
+.objetivos-autor > p:not(.subtitulo-autor) {
+    max-width: 850px;
+    margin: 0 auto 20px;
+    color: #e5d2b5;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.objetivos-autor h3 {
+    max-width: 800px;
+    margin: 50px auto 0;
+    color: var(--ouro-claro);
+    font-family: 'Cinzel', serif;
+    font-size: clamp(20px, 3vw, 28px);
+    line-height: 1.7;
+    font-style: italic;
+}
+
+/* =================================
+   RESPONSIVIDADE - SOBRE O AUTOR
+================================= */
+
+@media (max-width: 900px) {
+
+    .grade-projetos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .grade-projetos {
+        grid-template-columns: 1fr;
+    }
+
+    .apresentacao-autor {
+        min-height: 350px;
+        padding: 45px 20px;
+    }
+
+    .trajetoria-autor,
+    .tecnologia-autor,
+    .projetos-autor,
+    .objetivos-autor {
+        padding: 55px 20px;
+    }
+
+    .conteudo-trajetoria p:not(.subtitulo-autor),
+    .conteudo-tecnologia p:not(.subtitulo-autor),
+    .objetivos-autor > p:not(.subtitulo-autor) {
+        font-size: 19px;
+        text-align: left;
+    }
+
+    .cartao-projeto {
+        padding: 25px 20px;
+    }
+
+    .tecnologias-lista {
+        justify-content: center;
+    }
+
+}
+/* Navbar acompanha a rolagem */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* =================================
+   FICHA INTERATIVA DOS LUTADORES
+================================= */
+
+.janela-personagem {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+
+    background: rgba(0, 0, 0, 0.85);
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.conteudo-ficha {
+    position: relative;
+
+    width: 100%;
+    max-width: 750px;
+    max-height: 85vh;
+    overflow-y: auto;
+
+    padding: 40px;
+
+    background: var(--marrom);
+    border: 2px solid var(--ouro);
+    border-radius: 12px;
+
+    box-shadow: 0 0 35px rgba(197, 138, 36, 0.25);
+}
+
+.fechar-ficha {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+
+    background: none;
+    border: none;
+
+    color: var(--ouro-claro);
+    font-size: 32px;
+
+    cursor: pointer;
+}
+
+#nome-personagem {
+    color: var(--ouro-claro);
+    font-family: 'Cinzel', serif;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+#titulo-personagem {
+    color: #e5d2b5;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.informacoes-ficha {
+    margin-top: 25px;
+}
+
+.informacoes-ficha h3 {
+    color: var(--ouro-claro);
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.informacoes-ficha ul {
+    color: #e5d2b5;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    line-height: 1.8;
+    padding-left: 25px;
+}
+
+/* Ajustes para celulares */
+
+@media (max-width: 600px) {
+    .conteudo-ficha {
+        padding: 30px 22px;
+    }
+
+    #nome-personagem {
+        font-size: 25px;
+    }
+}
+
+/* Destaque do golpe forte */
+.golpe-forte {
+    color: #E8B75D;
+    background: rgba(218, 165, 32, 0.10);
+    border-left: 4px solid #D4A017;
+
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+/* Destaque do golpe final */
+.golpe-final {
+    color: #D58AFF;
+    background: rgba(160, 80, 220, 0.12);
+    border-left: 4px solid #A855D9;
+
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+/* Destaque das transformações */
+.transformacao {
+    color: #9BD58A;
+    background: rgba(75, 150, 65, 0.12);
+    border-left: 4px solid #5FAF45;
+
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.transformacao-tupa {
+    color: #42eaff;
+    background: rgba(0, 170, 255, 0.12);
+    border: 1px solid #168bd4;
+    padding: 8px;
+    border-radius: 5px;
+    text-shadow: 0 0 8px rgba(0, 200, 255, 0.5);
+}
+
+/* Destaque do brinquedo mais forte */
+.brinquedo-supremo {
+    color: #FF7777;
+    background: rgba(220, 40, 40, 0.12);
+    border-left: 4px solid #E53935;
+
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+/* Destaque dos territórios */
+.territorio {
+    color: #8DD9E8;
+    background: rgba(80, 180, 210, 0.12);
+    border-left: 4px solid #55BBD4;
+
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
